@@ -11,7 +11,6 @@ Looking at the problem statement, it is silly that one would try to automate dec
 The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and [test data](testdata.csv) .
 ### Required libraries
 
-Anaconda Python distribution is used to install most of the Python packages we need.
 This notebook uses several Python packages that come standard with the Anaconda Python distribution. The primary libraries that is used here are:
 *	NumPy: Provides a fast numerical array structure and helper functions.
 *	Pandas: Provides a DataFrame structure to store data in memory and work with it easily and efficiently.
