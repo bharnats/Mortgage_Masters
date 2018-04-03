@@ -8,7 +8,7 @@ Company wants to automate the loan eligibility process (real time) based on cust
 ### Disclaimer: 
 Looking at the problem statement, it is silly that one would try to automate decision based on replication of pasts decisions instead of optimizing for business result - minimizing loan default or fraud rate. Well, but the objective here is to play around with Machine Learning and practice Data munging with Python.
 
-The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset ![train data](traindata.csv) and ![test data](testdata.csv) .
+The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and ![test data](testdata.csv) .
 ### Required libraries
 
 Anaconda Python distribution is used to install most of the Python packages we need.
