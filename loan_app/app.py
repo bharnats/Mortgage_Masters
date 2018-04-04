@@ -50,7 +50,6 @@ def load_mortgage_model():
     model_scaler = joblib.load('static/models/model_scaler.pkl')
 
 
-
 def format_and_scale_input(input_data):
     input_dict = input_data.to_dict(flat=False)
     for key, value in input_dict.items():
@@ -75,6 +74,9 @@ def generate_response_dict(prediction_binary):
     return jsonify(response_dict)
 
 
+'''
+POST endpoint that receives applicant data and returns a classification result
+'''
 @app.route('/submit', methods = ['POST'])
 def submit():
     data = request.form
