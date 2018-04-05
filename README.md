@@ -11,7 +11,7 @@ Looking at the problem statement, it is silly that one would try to automate dec
 
 ### Data
 The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and [test data](testdata.csv). Evaluation Metric is accuracy i.e. percentage of loan approval that we correctly predict.
-![data](images/Data_Loan)
+![data](images/Data_Loan.PNG)
 
 ### Required libraries
 
