@@ -26,6 +26,7 @@ To make sure we have all of the packages needed, install them with conda:
 `conda install numpy pandas scikit-learn matplotlib keras` 
 
 ### Data Exploration and Data Analysis
-![histograms](images/histograms.PNG)  ![histograms](images/hist_LA_Term.PNG)
+![histograms](images/histograms.PNG)  ![histograms](images/hist_LA_Term.PNG) ![histograms](images/AI.PNG)   
+
 
 
