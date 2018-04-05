@@ -1,6 +1,5 @@
 # import necessary libraries
 import numpy as np
-import pandas as pd
 import os
 
 from flask import (
@@ -11,13 +10,10 @@ from flask import (
     redirect)
 
 import keras
-import numpy as np
-import pandas as pd
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from keras.utils import to_categorical
 from sklearn.externals import joblib
 from keras import backend as K
-
 
 
 #################################################
@@ -89,26 +85,13 @@ def submit():
         error_json = {'error': 'Invalid/incomplete input'}
         return jsonify(error_json)
 
+
 '''
 GET endpoint that serves up the index page
 '''
 @app.route('/')
 def home():
     return render_template('index.html')
-
-
-'''
-GET endpoint that serves up the index page
-'''
-@app.route('/test')
-def test():
-    test_dict = {'test': 'yes'}
-    return jsonify(test_dict)
-
-
-
-
-
 
 
 if __name__ == "__main__":
