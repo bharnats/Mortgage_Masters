@@ -30,9 +30,9 @@ def load_mortgage_model():
     global model
     global graph
     global model_scaler
-    model = keras.models.load_model('mortgage_model_trained.h5')
+    model = keras.models.load_model('webapp/model/mortgage_model_trained.h5')
     graph = K.get_session().graph
-    model_scaler = joblib.load('model_scaler.pkl')
+    model_scaler = joblib.load('webapp/model/model_scaler.pkl')
 
 
 
