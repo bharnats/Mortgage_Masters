@@ -1,4 +1,4 @@
-# Predicting Loan Grades with a Neural Network: A Machine Learning Pipeline 
+# Predicting Loan Grades with Neural Network: A Machine Learning Pipeline 
 
 ![home_loan](images/home_loan.jpg)
 
