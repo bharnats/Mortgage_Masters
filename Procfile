@@ -1,1 +1,1 @@
-web: gunicorn pub_atx.app:app
+web: gunicorn loan_app.app:app
