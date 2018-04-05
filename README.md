@@ -32,7 +32,12 @@ To make sure we have all of the packages needed, install them with conda:
 ### Loan Prediction Methodology
 ![loan_prediction](images/prediction_methodology.PNG)  
 
-Neural Network Applcation
+### Possible Algorithms:
+* Random Forest
+* Decision Trees
+* Support Vector machine (SVM)
+* Neural Network- Tensor Flow
+
 ![neural](images/neural_networks.jpg)
 
 
