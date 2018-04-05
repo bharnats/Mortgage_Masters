@@ -24,7 +24,9 @@ function getSubmittedData() {
 
 
 function handleSubmit() {
-  submittedData = getSubmittedData()
+  var formData = JSON.stringify($("#mortgage-form").serializeArray());
+  console.log(formData)
+  var submittedData = getSubmittedData();
   console.log(submittedData);
   console.log(JSON.stringify(submittedData));
   var classifyURL = './submit';
@@ -40,3 +42,7 @@ function handleSubmit() {
 }
 
 handleSubmit()
+
+
+var mortgageSubmit = document.querySelector("#mortgage-submit");
+mortgageSubmit.addEventListener("click", handleSubmit);
