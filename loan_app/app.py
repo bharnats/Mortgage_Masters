@@ -51,10 +51,7 @@ def load_mortgage_model():
 
 
 def format_and_scale_input(input_data):
-    input_dict = input_data.to_dict(flat=False)
-    for key, value in input_dict.items():
-        input_dict[key] = value[0]
-    forminput = pd.DataFrame([input_dict])
+    forminput = pd.DataFrame([input_data])
     forminput_scaled = model_scaler.transform(forminput)
     return forminput_scaled
 
@@ -71,7 +68,7 @@ def generate_response_dict(prediction_binary):
     else:
         prediction = 'denied'
     response_dict = {'prediction_type': prediction_binary, 'prediction': prediction}
-    return jsonify(response_dict)
+    return response_dict
 
 
 '''
@@ -79,16 +76,35 @@ POST endpoint that receives applicant data and returns a classification result
 '''
 @app.route('/submit', methods = ['POST'])
 def submit():
-    data = request.form
+    data = request.json
+    print(data)
     correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
                     'Dependents', 'Education', 'LoanAmount', 'Loan_Amount_Term',
                     'Married', 'Property_Area', 'Self_Employed']
     if correct_keys == sorted(data.keys()):
         prediction_binary = make_prediction(data)
-        response_json = generate_response_dict(prediction_binary)
-        return response_json
+        response_dict = generate_response_dict(prediction_binary)
+        return jsonify(response_dict)
     else:
-        return 'Invalid/incomplete input'
+        error_json = {'error': 'Invalid/incomplete input'}
+        return jsonify(error_json)
+
+'''
+GET endpoint that serves up the index page
+'''
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
+'''
+GET endpoint that serves up the index page
+'''
+@app.route('/test')
+def test():
+    test_dict = {'test': 'yes'}
+    return jsonify(test_dict)
+
 
 
 
