@@ -1,6 +1,7 @@
 # import necessary libraries
 import numpy as np
 import pandas as pd
+import os
 
 from flask import (
     Flask,
@@ -9,17 +10,89 @@ from flask import (
     request,
     redirect)
 
+import keras
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from keras.utils import to_categorical
+from sklearn.externals import joblib
+from keras import backend as K
+
+
 
 #################################################
 # Flask Setup
 #################################################
 app = Flask(__name__)
+model = None
+graph = None
+model_scaler = None
+
+
+sample_input_dict = {'Married': 1,
+                    'Dependents': 0,
+                    'Education': 1,
+                    'Self_Employed': 0,
+                    'ApplicantIncome': 9000,
+                    'CoapplicantIncome': 2000,
+                    'LoanAmount': 275,
+                    'Loan_Amount_Term': 360,
+                    'Credit_History': 1,
+                    'Property_Area': 2}
+
+
+def load_mortgage_model():
+    global model
+    global graph
+    global model_scaler
+    model = keras.models.load_model('static/models/mortgage_model_trained.h5')
+    graph = K.get_session().graph
+    model_scaler = joblib.load('static/models/model_scaler.pkl')
+
+
+
+def format_and_scale_input(input_data):
+    input_dict = input_data.to_dict(flat=False)
+    for key, value in input_dict.items():
+        input_dict[key] = value[0]
+    forminput = pd.DataFrame([input_dict])
+    forminput_scaled = model_scaler.transform(forminput)
+    return forminput_scaled
+
+
+def make_prediction(input_data):
+    forminput_scaled = format_and_scale_input(input_data)
+    prediction_binary = model.predict_classes(forminput_scaled)
+    return str(prediction_binary[0])
+
+
+def generate_response_dict(prediction_binary):
+    if prediction_binary == 1:
+        prediction = 'approved'
+    else:
+        prediction = 'denied'
+    response_dict = {'prediction_type': prediction_binary, 'prediction': prediction}
+    return jsonify(response_dict)
+
 
 @app.route('/submit', methods = ['POST'])
 def submit():
     data = request.form
-    return jsonify(data)
+    correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
+                    'Dependents', 'Education', 'LoanAmount', 'Loan_Amount_Term',
+                    'Married', 'Property_Area', 'Self_Employed']
+    if correct_keys == sorted(data.keys()):
+        prediction_binary = make_prediction(data)
+        response_json = generate_response_dict(prediction_binary)
+        return response_json
+    else:
+        return 'Invalid/incomplete input'
+
+
+
+
 
 
 if __name__ == "__main__":
+    load_mortgage_model()
     app.run()
