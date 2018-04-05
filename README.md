@@ -27,8 +27,7 @@ To make sure we have all of the packages needed, install them with conda:
 
 ### Data Exploration and Data Analysis
 ![histograms](images/histograms.PNG)  ![histograms](images/hist_LA_Term.PNG)
-![histograms](images/AI.PNG)   ![histograms](images/credit.PNG)
-![histograms](images/Loan_Status.PNG)
+![histograms](images/AI.PNG)   
 
 
 
