@@ -33,7 +33,7 @@ To make sure we have all of the packages needed, install them with conda:
 ![loan_prediction](images/prediction_methodology.PNG)  
 
 Neural Network Applcation
-![neural](images/neural_networks.PNG)
+![neural](images/neural_networks.jpg)
 
 
 
