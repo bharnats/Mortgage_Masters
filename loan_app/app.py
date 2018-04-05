@@ -35,6 +35,7 @@ def load_mortgage_model():
     graph = K.get_session().graph
     model_scaler = joblib.load(f'{relative_model_directory}/model_scaler.pkl')
 
+
 def get_relative_model_directory():
     current_directory_path = os.getcwd()
     loan_app_position = current_directory_path.find('loan_app')
@@ -49,7 +50,6 @@ load_mortgage_model()
 
 
 def format_and_scale_input(input_data):
-    print(f' input_data - {input_data}')
     forminput = pd.DataFrame([input_data])
     forminput_scaled = model_scaler.transform(forminput)
     return forminput_scaled
@@ -76,7 +76,6 @@ POST endpoint that receives applicant data and returns a classification result
 @app.route('/submit', methods = ['POST'])
 def submit():
     data = request.json
-    print(f' json post - {data}')
     correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
                     'Dependents', 'Education', 'LoanAmount', 'Loan_Amount_Term',
                     'Married', 'Property_Area', 'Self_Employed']
