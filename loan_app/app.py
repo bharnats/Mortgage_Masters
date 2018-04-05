@@ -30,10 +30,19 @@ def load_mortgage_model():
     global model
     global graph
     global model_scaler
-    model = keras.models.load_model('loan_app/model/mortgage_model_trained.h5')
+    relative_model_directory = get_relative_model_directory()
+    model = keras.models.load_model(f'{relative_model_directory}/mortgage_model_trained.h5')
     graph = K.get_session().graph
-    model_scaler = joblib.load('loan_app/model/model_scaler.pkl')
+    model_scaler = joblib.load(f'{relative_model_directory}/model_scaler.pkl')
 
+def get_relative_model_directory():
+    current_directory_path = os.getcwd()
+    loan_app_position = current_directory_path.find('loan_app')
+    if loan_app_position < 0:
+        path_to_model = 'loan_app/model'
+    else:
+        path_to_model = 'model'
+    return path_to_model
 
 
 load_mortgage_model()
