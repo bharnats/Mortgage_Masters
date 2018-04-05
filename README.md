@@ -16,11 +16,12 @@ The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset ca
 ### Required libraries
 
 This notebook uses several Python packages that come standard with the Anaconda Python distribution. The primary libraries that is used here are:
-*	NumPy: Provides a fast numerical array structure and helper functions.
-*	Pandas: Provides a DataFrame structure to store data in memory and work with it easily and efficiently.
-*	scikit-learn: The essential Machine Learning package in Python.
-*	Keras :A high-level neural networks API, written in Python and capable of running on top of TensorFlow, enabling fast experimentation.
-*	matplotlib: Basic plotting library in Python; most other Python plotting libraries are built on top of it.
+*	`NumPy`: Provides a fast numerical array structure and helper functions.
+*	`Pandas`: Provides a DataFrame structure to store data in memory and work with it easily and efficiently.
+*	`Scikit-learn`: The essential Machine Learning package in Python.
+*	`Keras` :A high-level neural networks API, written in Python and capable of running on top of TensorFlow, enabling fast experimentation.
+*	`Matplotlib`: Basic plotting library in Python; most other Python plotting libraries are built on top of it.
+
 To make sure we have all of the packages needed, install them with conda:
-conda install numpy pandas scikit-learn matplotlib keras 
+`conda install numpy pandas scikit-learn matplotlib keras` 
 
