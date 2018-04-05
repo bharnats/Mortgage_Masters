@@ -26,18 +26,6 @@ graph = None
 model_scaler = None
 
 
-sample_input_dict = {'Married': 1,
-                    'Dependents': 0,
-                    'Education': 1,
-                    'Self_Employed': 0,
-                    'ApplicantIncome': 9000,
-                    'CoapplicantIncome': 2000,
-                    'LoanAmount': 275,
-                    'Loan_Amount_Term': 360,
-                    'Credit_History': 1,
-                    'Property_Area': 2}
-
-
 def load_mortgage_model():
     global model
     global graph
@@ -45,6 +33,10 @@ def load_mortgage_model():
     model = keras.models.load_model('mortgage_model_trained.h5')
     graph = K.get_session().graph
     model_scaler = joblib.load('model_scaler.pkl')
+
+
+
+load_mortgage_model()
 
 
 def format_and_scale_input(input_data):
@@ -74,7 +66,6 @@ POST endpoint that receives applicant data and returns a classification result
 '''
 @app.route('/submit', methods = ['POST'])
 def submit():
-    load_mortgage_model()
     data = request.json
     print(f' json post - {data}')
     correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
@@ -98,4 +89,5 @@ def home():
 
 
 if __name__ == "__main__":
+    load_mortgage_model()
     app.run()
