@@ -36,7 +36,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=".\company\ACC">Company Profiles</a>
+              <a class="nav-link" href=".\data">Data</a>
             </li>
           </ul>
         </div>
@@ -65,30 +65,31 @@
             <div class="form-group">
               <label for="Married"> Married</label>
               <select class="form-control" id="Married">
-                <option>Yes</option>
-                <option>No</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
               </select>
             </div>
             <div class="form-group">
               <label for="Dependents"> Dependents</label>
               <select class="form-control" id="Dependents">
-                <option>1</option>
-                <option>2</option>
-                <option>3 or more</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 or more</option>
               </select>
             </div>
             <div class="form-group">
               <label for="Education"> College Degreee</label>
               <select class="form-control" id="Education">
-                <option>Yes</option>
-                <option>No</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
               </select>
             </div>
             <div class="form-group">
               <label for="Self_Employed"> Self Employed</label>
               <select class="form-control" id="Self_Employed">
-                <option>No</option>
-                <option>Yes</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
               </select>
             </div>
             <div class="form-group">
@@ -110,16 +111,16 @@
             <div class="form-group">
               <label for="Credit_History"> Credit History</label>
               <select class="form-control" id="Credit_History">
-                <option>Yes</option>
-                <option>No</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
               </select>
             </div>
             <div class="form-group">
               <label for="Property_Area"> Property Area</label>
               <select class="form-control" id="Property_Area">
-                <option>Urban</option> <!-- 0 -->
-                <option>Semiurban</option> <!-- 1 -->
-                <option>Rural</option> <!-- 2 -->
+                <option value="0">Urban</option> <!-- 0 -->
+                <option value="1">Semiurban</option> <!-- 1 -->
+                <option value="2">Rural</option> <!-- 2 -->
               </select>
             </div>
             <button type="button" id="mortgage-submit" class="btn btn-primary">Submit</button>
@@ -128,100 +129,6 @@
     </div>
     <br />
     <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p>
-                    Many people have preconceived ideas about the Austin economy. Most see it as a high-tech mecca, much like Silicon Valley
-                    in California.  In many ways, those assumptions are accurate.  Tech giants such as Apple, IBM, and Google
-                    all have large offices in the Austin area.  The city is also home to various tech starts including HomeAway and WP Engine.
-                </p>
-                <p>
-                    However, Austin's economy has so much more to offer.  The chart below gives you the opportunity
-                    to explore the city's public companies from three different angles.  Each box represents one of the 31
-                    companies with global headquarters in Austin.  You can use the buttons below the chart to toggle views.
-                </p>
-            </div>
-        </div>
-        <div class="container">
-            <div id="viz"></div>
-        </div>
-        <div id="toolbar">
-            <div class="btn-group">
-                <button type="button" id='market' class="btn btn-primary">Company Market Cap</button>
-                <button type="button" id='austin' class="btn btn-primary">Austin Based Employees</button>
-                <button type="button" id='total' class="btn btn-primary">Total Employee Base</button>
-            </div>
-        </div>
-        <p> </p>
-        <p>
-            First, look at them scaled by market capitalization (total outstanding shares * market value per share).
-            This will give you a view of which companies have the greatest overall value. You can also look at them
-            scaled by the largest employers in the Austin market. This will show you the direct impact these companies
-            have in our local economy as job creators. Lastly, look at them scaled by total employee base. This will
-            give you a feel for the number of employees outside of Austin and the impact of these businesses on other economies.
-        </p>
-    </div>
-
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p>
-                  Austin is a community that is known for its traffic.  This map shows the
-                  location of all the publicly traded companies.  This is an opportunity
-                  to look clustering of business types.  The hot spots are
-                  downtown Austin and the North Austin area known as The Domain.
-                </p>
-                <p>
-                  Click on the markers on the map for more information about the company and a link
-                  to the company overview page.
-                </p>
-            </div>
-        </div>
-        <div id="map-container">
-            <div id="map"></div>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p>
-                  The bubble chart below provides a visual representation of Austin's
-                  diverse economy.  The bubble size represents the total number of employees
-                  at each company and the color represents the industry.  While the
-                  tech industry is well represented, the chart shows how the drivers of Austin's
-                  economy are spread across seven different industries.
-                </p>
-            </div>
-        </div>
-        <div>
-           <a href="https://plot.ly/~jiji_v_jacob/2/?share_key=xTL4zTfssiULRNUWBv0Pwu" target="_blank" title="atxPublicCompanies" style="display: block; text-align: center;"><img src="https://plot.ly/~jiji_v_jacob/2.png?share_key=xTL4zTfssiULRNUWBv0Pwu" alt="atxPublicCompanies" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-           <script data-plotly="jiji_v_jacob:2" sharekey-plotly="xTL4zTfssiULRNUWBv0Pwu" src="https://plot.ly/embed.js" async></script>
-       </div>
-       <p>
-         Three of the companies that stand out from this chart are Parsley Energy,
-         American Campus Communities, and Chuy's.  Parsely Energy is one of the
-         smallest companies by total employees, but the largest by market cap.
-         American Campus Communities was founded in 1993 and is the nation's largest
-         developer, owner, and manager of high-quality student apartments.
-         Chuy's is one of the smallest by market cap, but the company employs 8,200
-         employees across the United States including almost 900 in Austin.
-       </p>
-    </div>
-
-    <hr>
-
-    <div class="sigline">
-        <p>| University of Texas at Austin : Data Analytics & Visualization |</p>
-        <p>Project Team: Mark Groner, Jiji Jacob, David W. Jones </p>
-
-    </div>
-
-
     <script src="/static/js/index.js" type="text/javascript"></script>
 </body>
 

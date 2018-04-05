@@ -63,7 +63,7 @@ def make_prediction(input_data):
 
 
 def generate_response_dict(prediction_binary):
-    if prediction_binary == 1:
+    if int(prediction_binary) == 1:
         prediction = 'approved'
     else:
         prediction = 'denied'
