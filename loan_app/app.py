@@ -1,5 +1,6 @@
 # import necessary libraries
 import numpy as np
+import pandas as pd
 import os
 
 from flask import (
@@ -55,7 +56,7 @@ def format_and_scale_input(input_data):
 def make_prediction(input_data):
     forminput_scaled = format_and_scale_input(input_data)
     prediction_binary = model.predict_classes(forminput_scaled)
-    return str(prediction_binary[0])
+    return prediction_binary[0]
 
 
 def generate_response_dict(prediction_binary):
@@ -63,7 +64,7 @@ def generate_response_dict(prediction_binary):
         prediction = 'approved'
     else:
         prediction = 'denied'
-    response_dict = {'prediction_type': prediction_binary, 'prediction': prediction}
+    response_dict = {'prediction_type': str(prediction_binary), 'prediction': prediction}
     return response_dict
 
 
@@ -73,7 +74,6 @@ POST endpoint that receives applicant data and returns a classification result
 @app.route('/submit', methods = ['POST'])
 def submit():
     data = request.json
-    print(data)
     correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
                     'Dependents', 'Education', 'LoanAmount', 'Loan_Amount_Term',
                     'Married', 'Property_Area', 'Self_Employed']
