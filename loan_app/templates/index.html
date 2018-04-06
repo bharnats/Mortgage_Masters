@@ -106,28 +106,39 @@
 	                </select>
 	              </div>
 	              <div class="form-group">
-	                <label for="ApplicantIncome">Applicant Income ($)</label>
+	                <label for="ApplicantIncome">Applicant Income ($ mo)</label>
 	                <input type="number" class="form-control" id="ApplicantIncome"> <!-- placeholder="name@example.com" -->
 	              </div>
 	              <div class="form-group">
-	                <label for="CoapplicantIncome">Coapplicant Income ($)</label>
+	                <label for="CoapplicantIncome">Coapplicant Income ($ mo)</label>
 	                <input type="number" class="form-control" id="CoapplicantIncome"> <!-- placeholder="name@example.com" -->
 	              </div>
 	            </div>
 	            <div class="column col-sm-12 col-md-4">
 	              <div class="form-group">
-	                <label for="LoanAmount">Loan Amount ($)</label>
+	                <label for="LoanAmount">Loan Amount ($ thou)</label>
 	                <input type="number" class="form-control" id="LoanAmount"> <!-- placeholder="name@example.com" -->
 	              </div>
 	              <div class="form-group">
-	                <label for="Loan_Amount_Term">Loan Amount Term</label>
-	                <input type="number" class="form-control" id="Loan_Amount_Term"> <!-- placeholder="name@example.com" -->
+	                <label for="Loan_Amount_Term">Loan Term</label>
+                  <select class="form-control" id="Loan_Amount_Term">
+                    <option value="12"> 1 Year </option>
+                    <option value="36"> 3 Year </option>
+                    <option value="60"> 5 Year </option>
+                    <option value="84"> 7 Year </option>
+                    <option value="120"> 10 Year </option>
+                    <option value="180"> 15 Year </option>
+                    <option value="240"> 20 Year </option>
+                    <option value="300"> 25 Year </option>
+                    <option value="360"> 30 Year </option>
+                    <option value="480"> 40 Year </option>
+	                </select>
 	              </div>
 	              <div class="form-group">
-	                <label for="Credit_History"> Credit score over 640? </label>
+	                <label for="Credit_History"> Credit Score </label>
 	                <select class="form-control" id="Credit_History">
-	                  <option value="1">Yes</option>
-	                  <option value="0">No</option>
+	                  <option value="1">640 or Better</option>
+	                  <option value="0">Below 640</option>
 	                </select>
 	              </div>
 	            </div>
