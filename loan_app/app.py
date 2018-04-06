@@ -40,9 +40,9 @@ def get_relative_model_directory():
     current_directory_path = os.getcwd()
     loan_app_position = current_directory_path.find('loan_app')
     if loan_app_position < 0:
-        path_to_model = 'loan_app/model'
+        path_to_model = 'loan_app/static/model'
     else:
-        path_to_model = 'model'
+        path_to_model = 'static/model'
     return path_to_model
 
 
