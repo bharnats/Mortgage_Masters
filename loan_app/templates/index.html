@@ -10,6 +10,8 @@
     <script src="https://d3js.org/d3.v5.js"></script>\
     <!-- Leaflet CSS & JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <link rel="stylesheet" href="static/css/basic_style.css">
+    <script src="/static/js/index.js" type="text/javascript"></script>
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-XNRTCesHENaXoVVjLx3Vm0rmwmS4W2g5w0xwZQIDPDvT4IDa/HRIvwb8CoH7/JPW"
@@ -59,72 +61,85 @@
     </div>
     <br />
     <div class="container">
+      <div class="well">
         <div class="row">
-          <form id="mortgage-form">
-            <div class="form-group">
-              <label for="Married"> Married</label>
-              <select class="form-control" id="Married">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+          <div class="column col-sm-12 col-md-3">
+            <form id="mortgage-form">
+              <div class="form-group">
+                <label for="Married"> Married</label>
+                <select class="form-control" id="Married">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Dependents"> Dependents</label>
+                <select class="form-control" id="Dependents">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3 or more</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Education"> College Degreee</label>
+                <select class="form-control" id="Education">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="Dependents"> Dependents</label>
-              <select class="form-control" id="Dependents">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3 or more</option>
-              </select>
+            <div class="column col-sm-12 col-md-3">
+              <div class="form-group">
+                <label for="Self_Employed"> Self Employed</label>
+                <select class="form-control" id="Self_Employed">
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ApplicantIncome">Applicant Income ($)</label>
+                <input type="number" class="form-control" id="ApplicantIncome"> <!-- placeholder="name@example.com" -->
+              </div>
+              <div class="form-group">
+                <label for="CoapplicantIncome">Coapplicant Income ($)</label>
+                <input type="number" class="form-control" id="CoapplicantIncome"> <!-- placeholder="name@example.com" -->
+              </div>
             </div>
-            <div class="form-group">
-              <label for="Education"> College Degreee</label>
-              <select class="form-control" id="Education">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
+            <div class="column col-sm-12 col-md-3">
+              <div class="form-group">
+                <label for="LoanAmount">Loan Amount ($)</label>
+                <input type="number" class="form-control" id="LoanAmount"> <!-- placeholder="name@example.com" -->
+              </div>
+              <div class="form-group">
+                <label for="Loan_Amount_Term">Loan Amount Term</label>
+                <input type="number" class="form-control" id="Loan_Amount_Term"> <!-- placeholder="name@example.com" -->
+              </div>
+              <div class="form-group">
+                <label for="Credit_History"> Is your credit score over 640? </label>
+                <select class="form-control" id="Credit_History">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="Self_Employed"> Self Employed</label>
-              <select class="form-control" id="Self_Employed">
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-              </select>
+            <div class="column col-sm-12 col-md-3">
+              <div class="form-group">
+                <label for="Property_Area"> Property Area</label>
+                <select class="form-control" id="Property_Area">
+                  <option value="0">Urban</option> <!-- 0 -->
+                  <option value="1">Semiurban</option> <!-- 1 -->
+                  <option value="2">Rural</option> <!-- 2 -->
+                </select>
+              </div>
+              <button type="button" id="mortgage-submit" class="btn btn-primary">Submit</button>
             </div>
-            <div class="form-group">
-              <label for="ApplicantIncome">Applicant Income</label>
-              <input type="number" class="form-control" id="ApplicantIncome"> <!-- placeholder="name@example.com" -->
-            </div>
-            <div class="form-group">
-              <label for="CoapplicantIncome">Coapplicant Income</label>
-              <input type="number" class="form-control" id="CoapplicantIncome"> <!-- placeholder="name@example.com" -->
-            </div>
-            <div class="form-group">
-              <label for="LoanAmount">Loan Amount</label>
-              <input type="number" class="form-control" id="LoanAmount"> <!-- placeholder="name@example.com" -->
-            </div>
-            <div class="form-group">
-              <label for="Loan_Amount_Term">Loan Amount Term</label>
-              <input type="number" class="form-control" id="Loan_Amount_Term"> <!-- placeholder="name@example.com" -->
-            </div>
-            <div class="form-group">
-              <label for="Credit_History"> Is your credit score over 640? </label>
-              <select class="form-control" id="Credit_History">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="Property_Area"> Property Area</label>
-              <select class="form-control" id="Property_Area">
-                <option value="0">Urban</option> <!-- 0 -->
-                <option value="1">Semiurban</option> <!-- 1 -->
-                <option value="2">Rural</option> <!-- 2 -->
-              </select>
-            </div>
-            <button type="button" id="mortgage-submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
+      </div> <!-- end input well -->
+      <div class="row">
+        <h1 id="model-classificaion"> Enter your data and hit submit </h1>
+      </div>
     </div>
     <br />
     <hr>
