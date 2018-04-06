@@ -95,12 +95,7 @@ GET endpoint that serves up the index page
 def home():
     return render_template('index.html')
 
-'''
-GET endpoint that serves up the index page
-'''
-@app.route('/inito')
-def inito():
-    return render_template('inito_index.html')
+
 
 
 if __name__ == "__main__":
