@@ -14,9 +14,12 @@ The interesting problems an investigator might face with this dataset include:
 * Practical and usable cross-validation strategy.
 * Choosing evaluation metric for the dataset and the problem being solved.
 * Handling missing data
+ ![Loan_Status](images/Loan_status.PNG)
  
-
-![Loan_Status](images/Loan_status.PNG)
+ #### Approach to handling Imbalanced Datasets:
+ * Resampling Techniques- leads to overfitting the model
+ * Random Undersampling Techniques- Undersampling leads to loss of information
+ 
 #### Disclaimer: 
 Looking at the problem statement, it is silly that one would try to automate decision based on replication of pasts decisions instead of optimizing for business result - minimizing loan default or fraud rate. Well, but the objective here is to play around with Machine Learning and practice Data munging with Python.
 
