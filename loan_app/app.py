@@ -95,7 +95,14 @@ GET endpoint that serves up the index page
 def home():
     return render_template('index.html')
 
+'''
+GET endpoint that serves up the index page
+'''
+@app.route('/inito')
+def inito():
+    return render_template('inito_index.html')
+
 
 if __name__ == "__main__":
     load_mortgage_model()
-    app.run()
+    app.run(debug=True)
