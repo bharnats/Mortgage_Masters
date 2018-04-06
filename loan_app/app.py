@@ -50,7 +50,6 @@ load_mortgage_model()
 
 
 def format_and_scale_input(input_data):
-    print(f' input_data - {input_data}')
     forminput = pd.DataFrame([input_data])
     forminput_scaled = model_scaler.transform(forminput)
     return forminput_scaled
@@ -63,11 +62,15 @@ def make_prediction(input_data):
 
 
 def generate_response_dict(prediction_binary):
-    if int(prediction_binary) == 1:
+    if prediction_binary == 1:
         prediction = 'approved'
+        prediction_text = 'Congratulations, Your Loan Has Been Approved!'
     else:
         prediction = 'denied'
-    response_dict = {'prediction_type': str(prediction_binary), 'prediction': prediction}
+        prediction_text = 'Sorry, Your Loan Has Been Denied'
+    response_dict = {'prediction_type': int(prediction_binary),
+                     'prediction': prediction,
+                     'prediction_text': prediction_text}
     return response_dict
 
 
@@ -77,7 +80,6 @@ POST endpoint that receives applicant data and returns a classification result
 @app.route('/submit', methods = ['POST'])
 def submit():
     data = request.json
-    print(f' json post - {data}')
     correct_keys = ['ApplicantIncome', 'CoapplicantIncome', 'Credit_History',
                     'Dependents', 'Education', 'LoanAmount', 'Loan_Amount_Term',
                     'Married', 'Property_Area', 'Self_Employed']
@@ -96,6 +98,8 @@ GET endpoint that serves up the index page
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
 
 
 if __name__ == "__main__":
