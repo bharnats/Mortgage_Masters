@@ -103,7 +103,7 @@ def home():
 '''
 GET endpoint that serves up the data page
 '''
-@app.route('/')
+@app.route('/data')
 def data():
     return render_template('data.html')
 
