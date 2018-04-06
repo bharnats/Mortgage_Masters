@@ -64,9 +64,13 @@ def make_prediction(input_data):
 def generate_response_dict(prediction_binary):
     if prediction_binary == 1:
         prediction = 'approved'
+        prediction_text = 'Congratulations, Your Loan Has Been Approved!'
     else:
         prediction = 'denied'
-    response_dict = {'prediction_type': int(prediction_binary), 'prediction': prediction}
+        prediction_text = 'Sorry, Your Loan Has Been Denied'
+    response_dict = {'prediction_type': int(prediction_binary),
+                     'prediction': prediction,
+                     'prediction_text': prediction_text}
     return response_dict
 
 
@@ -100,4 +104,4 @@ def home():
 
 if __name__ == "__main__":
     load_mortgage_model()
-    app.run(debug=True)
+    app.run()

@@ -42,7 +42,14 @@ function getSubmittedData() {
 function updateDisplayedLoanStatus(error, data) {
   console.log(error);
   console.log(data);
-  document.getElementById("model-classificaion").innerHTML = data['prediction'];
+  if (data["prediction"] === "approved") {
+    var newImgLocation = "static/images/approve.png";
+  } else {
+    var newImgLocation = "static/images/deny.png";
+  }
+  document.getElementById("model-classificaion-text").innerHTML = data['prediction_text'];
+  document.getElementById("model-classificaion-img").src=newImgLocation;
+  document.getElementById("mortgage-submit").innerHTML = "Try Again";
 
 }
 
