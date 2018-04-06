@@ -1,10 +1,5 @@
-body {
-    padding-top: 65px;
-}
 
-
-h1 {
-   display:inline;
-   width:200px;
-   text-align:center;
+#submit-col {
+  padding-top: 35px;
+  padding-left: 50px;
 }

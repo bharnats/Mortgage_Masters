@@ -100,4 +100,4 @@ def home():
 
 if __name__ == "__main__":
     load_mortgage_model()
-    app.run()
+    app.run(debug=True)
