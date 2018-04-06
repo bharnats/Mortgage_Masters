@@ -8,7 +8,7 @@ Dream Housing Finance company deals in all home loans. They have presence across
 Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents,Applicant Income, Co-Applicant Income, Loan Amount, Credit History and others. 
 
 ### Challenges Faced:
-Imbalanced Class Distribution- This is a scenario where the number of observations belonging to one class is significantly lower than those belonging to the other classes.
+Imbalanced Class Distribution- This is a scenario where the number of observations belonging to one class is significantly lower than those belonging to the other classes.While trying to resolve specific business challenges with imbalanced data sets, the classifiers produced by standard machine learning algorithms might not give accurate results. 
 
 ![Loan_Status](images/Loan_status.PNG)
 #### Disclaimer: 
