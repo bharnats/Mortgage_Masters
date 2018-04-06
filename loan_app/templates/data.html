@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="shortcut icon" href="static/images/loan_icon.jpg">
+
+	<!-- Bootstrap -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icons -->
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="static/css/inito_styles.css">
+  <link rel="stylesheet" href="static/css/basic_style.css">
+
+
+	<!--[if lt IE 9]> <script src="static/js/inito_html5shiv.js"></script> <![endif]-->
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax data-head" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="static/images/data_icon.png" alt="">
+			<span class="title">About the Data</span>
+			<span class="tagline">Diving Into the Data Used to Train the Model:<br>
+				<p>Definitions and Tables</p></span>
+		</h1>
+	</div>
+
+	<nav class="navbar navbar-default navbar-sticky">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+
+			<div class="navbar-collapse collapse">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="..">Home</a></li>
+					<li><a href="data"><a href="data">Data</a></li>
+				</ul>
+
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+</header>
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row section topspace">
+			<div class="col-md-12">
+				<p class="lead text-center text-muted">
+					Dream Housing Finance company deals in all home loans. They have presence
+					across all urban, semi urban and rural areas. Customer first apply for
+					home loan, after that company validates the customer eligibility for loan.
+					<br />
+					<br />
+					The company wants to automate the loan eligibility process (real time)
+					based on customer detail provided while filling online application form.
+				</p>
+			</div>
+		</div> <!-- / section -->
+
+		<div class="row section featured topspace">
+			<h2 class="section-title"><span>Try it out</span></h2>
+			<div class="container">
+	      <div class="jumbotron">
+	        <div class="row">
+	          <div class="column col-sm-12 col-md-4">
+	            <form id="mortgage-form">
+	              <div class="form-group">
+	                <label for="Married"> Marital Status</label>
+	                <select class="form-control" id="Married">
+	                  <option value="1">Married</option>
+	                  <option value="0">Single</option>
+	                </select>
+	              </div>
+	              <div class="form-group">
+	                <label for="Dependents"> Number of Dependents</label>
+	                <select class="form-control" id="Dependents">
+	                  <option value="0">0</option>
+	                  <option value="1">1</option>
+	                  <option value="2">2</option>
+	                  <option value="3">3 or more</option>
+	                </select>
+	              </div>
+	              <div class="form-group">
+	                <label for="Education"> College Degreee</label>
+	                <select class="form-control" id="Education">
+	                  <option value="1">Yes</option>
+	                  <option value="0">No</option>
+	                </select>
+	              </div>
+	            </div>
+	            <div class="column col-sm-12 col-md-4">
+	              <div class="form-group">
+	                <label for="Self_Employed"> Self Employed</label>
+	                <select class="form-control" id="Self_Employed">
+	                  <option value="0">No</option>
+	                  <option value="1">Yes</option>
+	                </select>
+	              </div>
+	              <div class="form-group">
+	                <label for="ApplicantIncome">Applicant Income ($ mo)</label>
+	                <input type="number" class="form-control" id="ApplicantIncome"> <!-- placeholder="name@example.com" -->
+	              </div>
+	              <div class="form-group">
+	                <label for="CoapplicantIncome">Coapplicant Income ($ mo)</label>
+	                <input type="number" class="form-control" id="CoapplicantIncome"> <!-- placeholder="name@example.com" -->
+	              </div>
+	            </div>
+	            <div class="column col-sm-12 col-md-4">
+	              <div class="form-group">
+	                <label for="LoanAmount">Loan Amount ($ thou)</label>
+	                <input type="number" class="form-control" id="LoanAmount"> <!-- placeholder="name@example.com" -->
+	              </div>
+	              <div class="form-group">
+	                <label for="Loan_Amount_Term">Loan Term</label>
+                  <select class="form-control" id="Loan_Amount_Term">
+                    <option value="12"> 1 Year </option>
+                    <option value="36"> 3 Year </option>
+                    <option value="60"> 5 Year </option>
+                    <option value="84"> 7 Year </option>
+                    <option value="120"> 10 Year </option>
+                    <option value="180"> 15 Year </option>
+                    <option value="240"> 20 Year </option>
+                    <option value="300"> 25 Year </option>
+                    <option value="360"> 30 Year </option>
+                    <option value="480"> 40 Year </option>
+	                </select>
+	              </div>
+	              <div class="form-group">
+	                <label for="Credit_History"> Credit Score </label>
+	                <select class="form-control" id="Credit_History">
+	                  <option value="1">640 or Better</option>
+	                  <option value="0">Below 640</option>
+	                </select>
+	              </div>
+	            </div>
+						</div>
+						<div class="row">
+	            <div class="column col-sm-12 col-md-4">
+	              <div class="form-group">
+	                <label for="Property_Area"> Property Area</label>
+	                <select class="form-control" id="Property_Area">
+	                  <option value="0">Urban</option> <!-- 0 -->
+	                  <option value="1">Semiurban</option> <!-- 1 -->
+	                  <option value="2">Rural</option> <!-- 2 -->
+	                </select>
+	              </div>
+							</div>
+							<div class="column col-sm-12 col-md-2">
+							</div>
+							<div class="column col-sm-12 col-md-6" id="submit-col">
+	              <button type="button" id="mortgage-submit" class="btn btn-primary"><b>Get your results</b></button>
+	            </div>
+						</div>
+	        </form>
+	      </div>
+	      <div class="row">
+          <div class="column col-sm-12 col-md-2">
+          </div>
+	        <div class="column col-sm-12 col-md-2">
+            <img class="img-circle" id="model-classificaion-img" src="static/images/submit.png" alt="" width="125px">
+          </div>
+          <div class="column col-sm-12 col-md-6">
+            <h4 id="model-classificaion-text"> Use the form appove to submit your data </h4>
+          </div>
+          <div class="column col-sm-12 col-md-2">
+          </div>
+	      </div>
+	    </div>
+		</div> <!-- / section -->
+
+		<div class="row section recentworks topspace">
+
+			<h2 class="section-title"><span>Training Data Analysis</span></h2>
+
+      <div class="row">
+
+				<div class="col-sm-12 col-md-4">
+          <img src="static/images/Property_Area.png" alt="" width="250px">
+        </div>
+        <div class="col-sm-12 col-md-8 analysis-text">
+          <p>
+            Majority of the Loans are requested for Semi-urban property types.
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+
+        <div class="col-sm-12 col-md-6 analysis-text">
+          <p>
+            The average loan amount requested is roughly 120 K for an average loan-amount term of 360 months
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img src="static/images/LA_Amount.png" alt="">
+          <img src="static/images/LA_term.png" alt="">
+        </div>
+      </div>
+		</div> <!-- /section -->
+
+		<div class="row section topspace">
+			<div class="panel panel-cta"><div class="panel-body">
+				<div class="col-lg-8">
+					<p> An full analysis of the training data was performed using Tableau. <br />
+						Click the button on the right for an interactive look at these charts and more! </p>
+				</div>
+				<div class="col-lg-4 text-right">
+					<a href="https://public.tableau.com/profile/bharathy7744#!/vizhome/MortgageMasters/MortgageMasters " target="_blank" class="btn btn-primary btn-lg">
+						See more charts
+					</a>
+				</div>
+			</div></div>
+		</div> <!-- /section -->
+
+		<div class="row section clients topspace">
+			<h2 class="section-title"><span>Contributors</span></h2>
+			<div class="col-lg-3">
+				<h4>
+					Bharathy Natarajan
+				</h4>
+        <p>
+          <b> Connect: </b> <br />
+          <a href="https://www.linkedin.com/in/bharathynatarajan/" target="_blank">
+            LinkedIn
+          </a> <br />
+          <a href="https://github.com/bharnats" target="_blank">
+            GitHub
+          </a>
+        </p>
+			</div>
+			<div class="col-lg-3">
+				<h4>
+					Mark Groner
+				</h4>
+        <p>
+          <b> Connect: </b> <br />
+          <a href="https://www.linkedin.com/in/mark-groner/" target="_blank">
+            LinkedIn
+          </a> <br />
+          <a href="https://github.com/markgroner" target="_blank">
+            GitHub
+          </a>
+        </p>
+			</div>
+			<div class="col-lg-3">
+				<h4>
+					Prakash Tendolkar
+				</h4>
+        <p>
+          <b> Connect: </b> <br />
+          <a href="https://www.linkedin.com/in/prakashtendolkar/" target="_blank">
+            LinkedIn
+          </a>
+        </p>
+			</div>
+			<div class="col-lg-3">
+				<h4>
+					David Jones
+				</h4>
+        <p>
+          <b> Connect: </b> <br />
+          <a href="https://www.linkedin.com/in/david-w-jones-atx/" target="_blank">
+            LinkedIn
+          </a> <br />
+          <a href="https://github.com/davidwjones" target="_blank">
+            GitHub
+          </a>
+        </p>
+			</div>
+		</div> <!-- /section -->
+
+	</div>	<!-- /container -->
+
+</main>
+
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>
+						<b>University of Texas at Austin</b><br>
+						Data Analytics and Visualization Program
+					</p>
+
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Design: <a href="http://www.gettemplate.com" rel="designer" target="_blank">Initio by GetTemplate</a>
+					</p>
+				</div>
+			</div>
+
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.8/d3plus.full.js"></script>
+<script src="static/js/inito_template.js"></script>
+<script src="static/js/index.js"></script>
+</body>
+</html>

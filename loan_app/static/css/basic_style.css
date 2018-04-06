@@ -12,3 +12,12 @@
 .analysis-text {
   padding-top: 35px;
 }
+
+
+.mortage-head {
+  background: #f4f4f4 url(../images/mortgage_header.jpg) top center;
+}
+
+.data-head {
+  background: #f4f4f4 url(../images/data_header.jpg) top center;
+}
