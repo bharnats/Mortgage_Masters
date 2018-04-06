@@ -39,16 +39,22 @@ function getSubmittedData() {
 };
 
 
+function updateDisplayedLoanStatus(error, data) {
+  console.log(error);
+  console.log(data);
+  document.getElementById("model-classificaion").innerHTML = data['prediction'];
+
+}
+
 function handleSubmit() {
   var submittedData = getSubmittedData();
   var classifyURL = './submit';
   d3.json(classifyURL)
     .header('Content-Type', 'application/json')
-    .post(JSON.stringify(submittedData), function(error, data) {
-      console.log(error);
-      console.log(data);
-   })
+    .post(JSON.stringify(submittedData), updateDisplayedLoanStatus)
 }
+
+
 
 
 var mortgageSubmit = document.querySelector("#mortgage-submit");
