@@ -6,6 +6,11 @@
 Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan, after that company validates the customer eligibility for loan.
 
 Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents,Applicant Income, Co-Applicant Income, Loan Amount, Credit History and others. 
+
+### Challenges Faced:
+Imbalanced Class Distribution- This is a scenario where the number of observations belonging to one class is significantly lower than those belonging to the other classes.
+
+![Loan_Status](images/Loan_status.PNG)
 #### Disclaimer: 
 Looking at the problem statement, it is silly that one would try to automate decision based on replication of pasts decisions instead of optimizing for business result - minimizing loan default or fraud rate. Well, but the objective here is to play around with Machine Learning and practice Data munging with Python.
 The interesting problems an investigator might face with this dataset include
@@ -34,11 +39,12 @@ To make sure we have all of the packages needed, install them with conda:
 
 ### Possible Algorithms:
 * Random Forest
-* Decision Trees
 * Support Vector machine (SVM)
 * Neural Network- Tensor Flow
 
 ![neural](images/neural_networks.jpg)
+
+
 
 
 
