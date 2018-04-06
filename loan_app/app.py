@@ -100,6 +100,13 @@ def home():
     return render_template('index.html')
 
 
+'''
+GET endpoint that serves up the data page
+'''
+@app.route('/')
+def data():
+    return render_template('data.html')
+
 
 
 if __name__ == "__main__":
