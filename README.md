@@ -28,6 +28,14 @@ Looking at the problem statement, it is silly that one would try to automate dec
 The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and [test data](testdata.csv). Evaluation Metric is accuracy i.e. percentage of loan approval that we correctly predict.
 ![data](images/Data_Loan.PNG)
 
+### Data Exploration
+* Almost 85% of applicants are not self-employed 
+* The vast majority of the loans had a term of 30 years.
+* Lenders Look at more than just credit score.
+* The model is trained on 10 variables.
+* The target variable Loan_Status(Yes/No) is Binary and hence a classification machine learning model is selected. 
+* Most of the loans are requested by applicants with low income, but not extremely low
+
 ### Required libraries
 
 This notebook uses several Python packages that come standard with the Anaconda Python distribution. The primary libraries that is used here are:
