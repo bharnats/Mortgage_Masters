@@ -29,7 +29,7 @@ The interesting problems an investigator might face with this dataset include:
 * Handling missing data
  ![Loan_Status](images/Loan_status.PNG)
 
-### Data Exploration
+### Train Data Exploration
 * Almost 85% of applicants are not self-employed 
 * The vast majority of the loans had a term of 30 years.
 * Lenders Look at more than just credit score.
