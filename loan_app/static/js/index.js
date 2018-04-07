@@ -49,7 +49,7 @@ function updateDisplayedLoanStatus(error, data) {
   }
   document.getElementById("model-classificaion-text").innerHTML = data['prediction_text'];
   document.getElementById("model-classificaion-img").src=newImgLocation;
-  document.getElementById("mortgage-submit").innerHTML = "Click Here to Resubmit";
+  document.getElementById("mortgage-submit").innerHTML = "Submit Another Application";
 
 }
 
