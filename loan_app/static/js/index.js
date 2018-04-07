@@ -49,7 +49,7 @@ function updateDisplayedLoanStatus(error, data) {
   }
   document.getElementById("model-classificaion-text").innerHTML = data['prediction_text'];
   document.getElementById("model-classificaion-img").src = newImgLocation;
-  document.getElementById("mortgage-submit").innerHTML = "Submit Another Application";
+  document.getElementById("mortgage-submit").innerHTML = "Resubmit Loan Application";
 
 }
 
@@ -62,7 +62,15 @@ function handleSubmit() {
 }
 
 
+function handleRefresh() {
+  document.getElementById("mortgage-form").reset(); 
+}
+
+
 
 
 var mortgageSubmit = document.querySelector("#mortgage-submit");
 mortgageSubmit.addEventListener("click", handleSubmit);
+
+var mortgageRefresh = document.querySelector("#mortgage-refresh");
+mortgageRefresh.addEventListener("click", handleRefresh);
