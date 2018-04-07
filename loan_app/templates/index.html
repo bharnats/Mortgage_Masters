@@ -20,7 +20,7 @@
 <body class="home">
 
 <header id="header">
-	<div id="head" class="parallax" parallax-speed="2">
+	<div id="head" class="parallax mortage-head" parallax-speed="2">
 		<h1 id="logo" class="text-center">
 			<img class="img-circle" src="static/images/loan_icon.jpg" alt="">
 			<span class="title">Mortgage Masters</span>
@@ -67,7 +67,7 @@
 		</div> <!-- / section -->
 
 		<div class="row section featured topspace">
-			<h2 class="section-title"><span>Try it out</span></h2>
+			<h2 class="section-title"><span>Enter Your Information</span></h2>
 			<div class="container">
 	      <div class="jumbotron">
 	        <div class="row">
@@ -90,7 +90,7 @@
 	                </select>
 	              </div>
 	              <div class="form-group">
-	                <label for="Education"> College Degreee</label>
+	                <label for="Education"> College Degree</label>
 	                <select class="form-control" id="Education">
 	                  <option value="1">Yes</option>
 	                  <option value="0">No</option>
@@ -130,7 +130,7 @@
                     <option value="180"> 15 Year </option>
                     <option value="240"> 20 Year </option>
                     <option value="300"> 25 Year </option>
-                    <option value="360"> 30 Year </option>
+                    <option value="360" selected="selected"> 30 Year </option>
                     <option value="480"> 40 Year </option>
 	                </select>
 	              </div>
@@ -154,10 +154,11 @@
 	                </select>
 	              </div>
 							</div>
-							<div class="column col-sm-12 col-md-2">
+							<div class="column col-sm-12 col-md-4 mortgage-submit-refresh" id="submit-col">
+								<button type="button" id="mortgage-submit" class="btn btn-primary"><b>Submit Loan Application</b></button>
 							</div>
-							<div class="column col-sm-12 col-md-6" id="submit-col">
-	              <button type="button" id="mortgage-submit" class="btn btn-primary"><b>Get your results</b></button>
+							<div class="column col-sm-12 col-md-4 mortgage-submit-refresh" id="refresh-col">
+	              <button type="button" id="mortgage-refresh" class="btn btn-primary"><b>Refresh Application Form</b></button>
 	            </div>
 						</div>
 	        </form>
@@ -184,19 +185,32 @@
       <div class="row">
 
 				<div class="col-sm-12 col-md-4">
-          <img src="static/images/applicants_v_property_type.png" alt="" width="250px">
+          <img src="static/images/Property_Area.png" alt="" width="250px">
         </div>
         <div class="col-sm-12 col-md-8 analysis-text">
-          <p>
-            Majority of the Loans are requested for Semi-urban property types.
+          <p class="lead">
+            According to the graph on the left, more loans are submitted for semiurban properties than urban or rural.
+						However, semiurban loan applications are denied at a lower rate than
+						the other two categories.  This relationship is likely due to the fact
+						that individuals living in the suburbs are typically older and more
+						likely to have established careers and/or spouses with a second income.
+					</p>
         </div>
       </div>
       <hr>
       <div class="row">
 
         <div class="col-sm-12 col-md-6 analysis-text">
-          <p>
-            The average loan amount requested is roughly 120 K for an average loan-amount term of 360 months
+          <p class="lead">
+						Most loan applications are relatively similar to one another.
+						The average loan amount is around $120,000 and most applications do not deviate
+						far from that node.  Further, most applications are for 30 year mortgages.
+						<br />
+						<br />
+						A 30 year window gives lenders the confidence that applicants will be able to repay the
+						principal with interest. It also allows applicants to maximize present purchasing power
+						by leveraging future earnings.
+					</p>
         </div>
         <div class="col-sm-12 col-md-6">
           <img src="static/images/LA_Amount.png" alt="">
@@ -208,7 +222,7 @@
 		<div class="row section topspace">
 			<div class="panel panel-cta"><div class="panel-body">
 				<div class="col-lg-8">
-					<p> An full analysis of the training data was performed using Tableau. <br />
+					<p> A full analysis of the training data was performed using Tableau. <br />
 						Click the button on the right for an interactive look at these charts and more! </p>
 				</div>
 				<div class="col-lg-4 text-right">
@@ -257,6 +271,9 @@
           <b> Connect: </b> <br />
           <a href="https://www.linkedin.com/in/prakashtendolkar/" target="_blank">
             LinkedIn
+          </a> <br />
+          <a href="https://github.com/ptendolkar1" target="_blank">
+            GitHub
           </a>
         </p>
 			</div>
