@@ -48,7 +48,7 @@ function updateDisplayedLoanStatus(error, data) {
     var newImgLocation = "static/images/deny.png";
   }
   document.getElementById("model-classificaion-text").innerHTML = data['prediction_text'];
-  document.getElementById("model-classificaion-img").src=newImgLocation;
+  document.getElementById("model-classificaion-img").src = newImgLocation;
   document.getElementById("mortgage-submit").innerHTML = "Submit Another Application";
 
 }
