@@ -51,6 +51,7 @@ To make sure we have all of the packages needed, install them with conda:
 
 ### Possible Algorithms:
 * Random Forest
+* K-Nearest Neighbor Classifier
 * Support Vector machine (SVM)
 * Neural Network- Tensor Flow
 
