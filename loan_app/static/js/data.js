@@ -35,3 +35,17 @@ function renderTable(fileToRender) {
 
 
 renderTable('train')
+
+function handleTrainClick() {
+  renderTable('train')
+}
+
+function handleTestClick() {
+  renderTable('clean')
+}
+
+var $trainBtn = document.getElementById("trainDataButton");
+var $cleanBtn = document.getElementById("cleanDataButton");
+
+$trainBtn.addEventListener("click", handleTrainClick);
+$cleanBtn.addEventListener("click", handleTestClick);
