@@ -51,9 +51,14 @@ load_mortgage_model()
 
 def format_and_scale_input(input_data):
     forminput = pd.DataFrame([input_data])
+    column_order_list = ['Dependents', 'Education', 'Self_Employed', 'ApplicantIncome',
+                         'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term',
+                         'Credit_History', 'Property_Area']
+    forminput = forminput[column_order_list]
     forminput_scaled = model_scaler.transform(forminput)
     return forminput_scaled
 
+['Dependents', 'Education', 'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History', 'Property_Area']
 
 def make_prediction(input_data):
     forminput_scaled = format_and_scale_input(input_data)
