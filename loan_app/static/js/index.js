@@ -72,6 +72,9 @@ function handleSubmit() {
 
 function handleRefresh() {
   document.getElementById("mortgage-form").reset();
+  document.getElementById("model-classificaion-text").innerHTML = "Use the form above to submit your data";
+  document.getElementById("model-classificaion-img").src = "static/images/submit.png"
+  document.getElementById("mortgage-submit").innerHTML = "Submit Loan Application";
 }
 
 
