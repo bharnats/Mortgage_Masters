@@ -2,6 +2,8 @@
 import numpy as np
 import pandas as pd
 import os
+import time
+
 
 from flask import (
     Flask,
@@ -90,6 +92,7 @@ def submit():
     if correct_keys == sorted(data.keys()):
         prediction_binary = make_prediction(data)
         response_dict = generate_response_dict(prediction_binary)
+        time.sleep(3)
         return jsonify(response_dict)
     else:
         error_json = {'error': 'Invalid/incomplete input'}

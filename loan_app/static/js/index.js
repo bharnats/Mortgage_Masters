@@ -39,6 +39,7 @@ function getSubmittedData() {
 };
 
 
+
 function updateDisplayedLoanStatus(error, data) {
   console.log(error);
   console.log(data);
@@ -50,10 +51,17 @@ function updateDisplayedLoanStatus(error, data) {
   document.getElementById("model-classificaion-text").innerHTML = data['prediction_text'];
   document.getElementById("model-classificaion-img").src = newImgLocation;
   document.getElementById("mortgage-submit").innerHTML = "Resubmit Loan Application";
+}
 
+
+
+function provideLoadingFeedback() {
+  document.getElementById("model-classificaion-text").innerHTML = "Reviewing your application...";
+  document.getElementById("model-classificaion-img").src = "static/images/load.gif";
 }
 
 function handleSubmit() {
+  provideLoadingFeedback();
   var submittedData = getSubmittedData();
   var classifyURL = './submit';
   d3.json(classifyURL)
@@ -63,7 +71,7 @@ function handleSubmit() {
 
 
 function handleRefresh() {
-  document.getElementById("mortgage-form").reset(); 
+  document.getElementById("mortgage-form").reset();
 }
 
 
