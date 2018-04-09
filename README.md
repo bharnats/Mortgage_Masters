@@ -12,6 +12,16 @@ Looking at the problem statement, it is silly that one would try to automate dec
 
 The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and [test data](testdata.csv). Evaluation Metric is accuracy i.e. percentage of loan approval that we correctly predict.
 
+### Train Data Exploration
+* Almost 85% of applicants are not self-employed 
+* The vast majority of the loans had a term of 30 years.
+* Lenders Look at more than just credit score.
+* The model is trained on 10 variables.
+* The target variable Loan_Status(Yes/No) is Binary and hence a classification machine learning model is selected. 
+* Most of the loans are requested by applicants with low income, but not extremely low
+* More Dependents send loan approval high.
+* Loans for employed graduates with bad credit history still get approved !
+
 #### ![data](images/Data_Loan.PNG)
 
 ### Challenges Faced:
@@ -35,17 +45,6 @@ The interesting problems an investigator might face with this dataset include:
  #### Want More? Further Reading on imbalanced datasets
  https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/
  
-
-### Train Data Exploration
-* Almost 85% of applicants are not self-employed 
-* The vast majority of the loans had a term of 30 years.
-* Lenders Look at more than just credit score.
-* The model is trained on 10 variables.
-* The target variable Loan_Status(Yes/No) is Binary and hence a classification machine learning model is selected. 
-* Most of the loans are requested by applicants with low income, but not extremely low
-* More Dependents send loan approval high.
-* Loans for employed graduates with bad credit history still get approved !
-
 ### Required libraries
 This notebook uses several Python packages that come standard with the Anaconda Python distribution. The primary libraries that are used here are:
 *	`NumPy`: Provides a fast numerical array structure and helper functions.
