@@ -12,6 +12,8 @@ Looking at the problem statement, it is silly that one would try to automate dec
 
 The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset can be downloaded from the challenge page or from the direct link to the same dataset [train data](traindata.csv) and [test data](testdata.csv). Evaluation Metric is accuracy i.e. percentage of loan approval that we correctly predict.
 
+#### ![data](images/Data_Loan.PNG)
+
 ### Train Data Exploration
 * Almost 85% of applicants are not self-employed 
 * The vast majority of the loans had a term of 30 years.
@@ -21,8 +23,6 @@ The problem was hosted for Data hack Contest in Analytics Vidhya. The dataset ca
 * Most of the loans are requested by applicants with low income, but not extremely low
 * More Dependents send loan approval high.
 * Loans for employed graduates with bad credit history still get approved !
-
-#### ![data](images/Data_Loan.PNG)
 
 ### Challenges Faced:
 The interesting problems an investigator might face with this dataset include:
