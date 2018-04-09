@@ -23,14 +23,14 @@ The interesting problems an investigator might face with this dataset include:
 * Imbalanced Class Distribution - This is a scenario where the number of observations belonging to one class is significantly lower than those belonging to the other classes.While trying to resolve specific business challenges with imbalanced data sets, the classifiers produced by standard machine learning algorithms might not give accurate results.
  ![Loan_Status](images/Loan_status.PNG)
  
-  #### Approach to handling Imbalanced Datasets:
+#### Approach to handling Imbalanced Datasets:
 * Collect More Data
 * Change the performance metric (like F1 Score, precision, recall)
 * Try different algorithms
 * Random Under-Sampling
-    ** cons: May lead to loss of information and the chosen sample may be a biased sample.
+     `cons:` May lead to loss of information and the chosen sample may be a biased sample.
 * Random Over-Sampling 
-    ** cons: Leads to overfitting the model.
+    `cons:` Leads to overfitting the model.
  
  #### Want More? Further Reading on imbalanced datasets
  https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/
